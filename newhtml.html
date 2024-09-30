@@ -1,1 +1,187 @@
-<p>This is a new html file</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieLens</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414; /* Dark background */
+            color: #fff; /* White text color */
+            text-align: center;
+        }
+        .header {
+            background-color: #000; /* Black header */
+            padding: 20px 50px; /* Add horizontal padding */
+            display: flex;
+            justify-content: space-between; /* Space between title and search */
+            align-items: center; /* Center vertically */
+        }
+        .main {
+            padding: 50px;
+        }
+        .title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #FFD700; /* Yellow title */
+            font-family: 'Verdana', sans-serif; /* Styled font */
+            font-weight: bold; /* Bold title */
+            text-align: left; /* Align title to the left */
+            flex: 1; /* Allow title to take up space */
+        }
+        .search-container {
+            margin-top: 0; /* Remove margin-top */
+        }
+        .search-bar {
+            padding: 10px;
+            font-size: 1rem;
+            width: 300px;
+            border: 2px solid #FFD700; /* Yellow border */
+            border-radius: 5px;
+            background-color: #222; /* Darker background for input */
+            color: #fff; /* White text in input */
+        }
+        .search-button {
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #FFD700; /* Yellow button */
+            color: #000; /* Black text on button */
+            cursor: pointer;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+        .search-button:hover {
+            background-color: #FFC107; /* Darker yellow on hover */
+        }
+        .videos {
+            margin-top: 50px;
+            display: flex; /* Use flexbox for side by side layout */
+            justify-content: space-between; /* Space between videos */
+            width: 100%; /* Full width for videos */
+        }
+        .video {
+            width: 48%; /* Adjust width to fit side by side */
+            margin: 0; /* Remove margin */
+        }
+        iframe {
+            width: 100%;
+            height: 360px; /* Set a fixed height for videos */
+            border: none; /* Remove border */
+        }
+        .description {
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #ddd; /* Light gray for description */
+        }
+        .ratings {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #FFD700; /* Yellow color for section titles */
+        }
+        .reviews {
+            text-align: left; /* Align reviews to the left */
+            max-width: 800px; /* Set max width for review section */
+            margin: auto; /* Center the review section */
+            margin-top: 20px;
+        }
+        .review-box {
+            width: 100%; /* Full width for review box */
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid #FFD700; /* Yellow border */
+            border-radius: 5px;
+            background-color: #222; /* Darker background for input */
+            color: #fff; /* White text in input */
+            resize: none; /* Prevent resizing */
+        }
+        .submit-review {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FFD700; /* Yellow button */
+            color: #000; /* Black text on button */
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .submit-review:hover {
+            background-color: #FFC107; /* Darker yellow on hover */
+        }
+        .existing-reviews {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #ddd; /* Light gray for reviews */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">MovieLens</div> <!-- MovieLens title moved to the left and made bold -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search for a movie or TV show...">
+            <button class="search-button">Search</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="videos">
+            <!-- Video 1 -->
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/v-94Snw-H4o" allowfullscreen></iframe>
+                <div class="description">
+                    <strong>Movie Title 1:</strong> A thrilling journey of adventure and discovery, where every moment counts.
+                </div>
+                <div class="ratings">
+                    <strong>Ratings:</strong>
+                    <input type="radio" name="rating1" value="1">1
+                    <input type="radio" name="rating1" value="2">2
+                    <input type="radio" name="rating1" value="3">3
+                    <input type="radio" name="rating1" value="4">4
+                    <input type="radio" name="rating1" value="5">5
+                </div>
+                <div class="reviews">
+                    <strong>Reviews:</strong>
+                    <div class="existing-reviews">
+                        <p>"An unforgettable experience!"</p>
+                        <p>"A masterpiece of modern cinema!"</p>
+                    </div>
+                    <textarea class="review-box" placeholder="Write your review here..."></textarea>
+                    <br>
+                    <button class="submit-review">Submit Review</button>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/h9Q4zZS2v1k" allowfullscreen></iframe>
+                <div class="description">
+                    <strong>Movie Title 2:</strong> A heartwarming tale of love and perseverance, set against breathtaking landscapes.
+                </div>
+                <div class="ratings">
+                    <strong>Ratings:</strong>
+                    <input type="radio" name="rating2" value="1">1
+                    <input type="radio" name="rating2" value="2">2
+                    <input type="radio" name="rating2" value="3">3
+                    <input type="radio" name="rating2" value="4">4
+                    <input type="radio" name="rating2" value="5">5
+                </div>
+                <div class="reviews">
+                    <strong>Reviews:</strong>
+                    <div class="existing-reviews">
+                        <p>"A beautiful story with incredible performances."</p>
+                        <p>"A must-see for everyone!"</p>
+                    </div>
+                    <textarea class="review-box" placeholder="Write your review here..."></textarea>
+                    <br>
+                    <button class="submit-review">Submit Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
